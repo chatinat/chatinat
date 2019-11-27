@@ -36,31 +36,43 @@ and open the template in the editor.
     <body>
 
         <div id="myContent" class="w3-container marginner" style="width: 35% " >
-            <div class="w3-card-4">
+            
                 <div class="w3-container w3-amber ">
                     <h2><i class="fa fa-unlock fa-1g"></i> เข้าสู่ระบบ (นักศึกษา/บุคลากร)</h2> 
                 </div>
-                <form class="w3-container w3-amber" action="/action_page.php">
+            
+                <form class="w3-container w3-amber" action method="post">
                     <input class="w3-input w3-border"
-                           type="text" name="firstname" 
+                           type="text" id="name"
                            required 
                            pattern="[A-Za-z0-9]*" maxlength="10" 
                            placeholder="ID User">
                     <br>
                     <input class="w3-input w3-border"
-                           type="password" name="lastname" 
+                           type="password" id="psw" 
                            required 
                            placeholder="Password"
                            >
-                    <br>
-                    <a href="http://localhost:8383/Sprint1-ver/Information.html"> <input  class="w3-button w3-red w3-right"
-                                                                                    type= submit value="Submit"                          
-                                                                                    ></a>
-                    <br>
-                    <br>
-                    <br>
-                </form> 
-            </div>
-    </body>
+                    <p><button onclick="MyFunction()"  class="w3-button w3-red w3-right">test</button></p><br><br>
+                </form>
+        </div>
+        <p id="wrong"></p>
+            
+        <script language="JavaScript">
+        function MyFunction() {
+            var name = document.getElementById("name").value;
+            var psw = document.getElementById("psw").value;
+            if(name === "6109680105" && psw === "6109680105")
+            {
+                window.location = "http://localhost:8383/chatinat/Information.html";
+            }
+            else{
+                alert("Password Uncorrect");
+            }
+           }
+        
+        </script>
+        </body>
+        
 </html>
 
