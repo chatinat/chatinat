@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login ระบบลงทะเบียนล่าช้า</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+              href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" 
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style type="text/css">
+                 .marginner {
+                                width:200px;
+                                height:200px;
+                                position: fixed;
+                                top: 48%;
+                                left: 38%;
+                                margin-top: -100px;
+                                margin-left: -100px;
+                               }
+        </style>
+        <style>
+              body {
+                    background-image: url("loginP.png");
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: cover;
+                   } 
+        </style>
+    </head>
+    <body>
+
+        <div id="myContent" class="w3-container marginner" style="width: 35% " >
+            <div class="w3-card-4">
+                <div class="w3-container w3-amber ">
+                    <h2><i class="fa fa-unlock fa-1g"></i> เข้าสู่ระบบ (นักศึกษา/บุคลากร)</h2> 
+                </div>
+                <form class="w3-container w3-amber" action="/action_page.php">
+                    <input class="w3-input w3-border"
+                           type="text" name="firstname" 
+                           required 
+                           pattern="[A-Z][A-Za-z0-9]*" maxlength="10" 
+                           placeholder="ID User">
+                    <br>
+                    <input class="w3-input w3-border"
+                           type="password" name="lastname" 
+                           required 
+                           placeholder="Password"
+                           >
+                    <br>
+                    <a href="http://localhost:8383/Sprint1-ver/Information.html"> <input  class="w3-button w3-red w3-right"
+                                                                                    type= submit value="Submit"                          
+                                                                                    ></a>
+                    <br>
+                    <br>
+                    <br>
+                </form> 
+            </div>
+    </body>
+</html>
+
