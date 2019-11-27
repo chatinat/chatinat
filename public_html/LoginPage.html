@@ -53,16 +53,21 @@ and open the template in the editor.
                            required 
                            placeholder="Password"
                            >
-                    <p><button onclick="MyFunction()"  class="w3-button w3-red w3-right">test</button></p><br><br>
+                    <br>
+                    <br>
+
                 </form>
+            <p><button onclick="MyFunction()"  class="w3-button w3-red w3-right">submit</button></p>
+            
         </div>
         <p id="wrong"></p>
             
         <script language="JavaScript">
         function MyFunction() {
+            
             var name = document.getElementById("name").value;
             var psw = document.getElementById("psw").value;
-            if(name === "6109680105" && psw === "6109680105")
+            if(name === "6109680105" && psw === "Mudmeenarak")
             {
                 window.location = "http://localhost:8383/chatinat/Information.html";
             }
