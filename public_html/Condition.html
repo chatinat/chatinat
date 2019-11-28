@@ -14,7 +14,7 @@ and open the template in the editor.
         <link rel="stylesheet" 
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
               <link rel="stylesheet" href="style.css" type="text/css"/>
-
+        <link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
         <style type="text/css">
                    .marginner {   
                                 width:200px;
@@ -61,7 +61,7 @@ and open the template in the editor.
                 font-size: 35px;
                 color: white;
                 }
-                .button {
+            .button {
                     width: 225px;
                     height: 50px;
                     font-size: 16px;
@@ -70,12 +70,16 @@ and open the template in the editor.
                     border-radius: 8px;
                     border: 2px solid #555555
                 }
+        fontext{
+                   font-family: 'Sarabun', sans-serif; 
+                }
         </style>
     </head>
     <body>
         <header>
         </header>
         <section>
+            <fontext>
             <nav><br><b><a href = "http://localhost:8383/chatinat/Information.html"><input type="button" class="button w3-amber w3-border w3-border-black w3-round-large" value="ย้อนกลับ"></a><br></b></nav>
             <article>
                 <figure>
@@ -225,17 +229,21 @@ and open the template in the editor.
 
   </td></tr></table></figure>
                 <table ALIGN=CENTER>
-                <TR ALIGN=center><TD COLSPAN=4><FONT  SIZE=3>เลือก <font color=#0000EE>จดทะเบียน</font>
-                เพื่อเข้าสู่ระบบการจดทะเบียน หรือ เลือก <font color=#0000EE>ยกเลิก</font> เพื่อออกจากระบบ</TD></TR>
+                <TR ALIGN=center><TD COLSPAN=4><FONT  SIZE=3>เลือก <font color=#0000EE>ยกเลิก</font>
+                เพื่อออกจากระบบ หรือ เลือก <font color=#0000EE>จดทะเบียน</font> เพื่อทำการจดทะเบียน</TD></TR>
                 <TR><TD COLSPAN=4>&nbsp;</TD></TR><TD ALIGN=CENTER><FORM AUTOCOMPLETE=OFF METHOD=POST ACTION=adddrop.asp?avs979863664=3 NAME=frmok>
-                        <a href = "http://localhost:8383/chatinat/LoginPage.html"><INPUT TYPE=button VALUE=ยกเลิก></a></FORM></TD>
+                        <a href = "http://localhost:8383/chatinat/LoginPage.html"><INPUT TYPE=button VALUE= ยกเลิก></a></FORM></TD>
                         <TD WIDTH=20></TD><TD ALIGN=CENTER>
                         <FORM AUTOCOMPLETE=OFF METHOD=POST ACTION=student.asp?avs979863664=3 NAME=frmno>
-                        <a href = "http://localhost:8383/chatinat/SelectSub.html"><INPUT TYPE=button VALUE=จดทะเบียน></a></FORM></TD></table>
+                        <a href = "http://localhost:8383/chatinat/SelectSub.html"><INPUT TYPE=button VALUE=จดทะเบียน></a></FORM></TD>
+                </table>
+                <div class="w3-container">
+                      <div class="w3-panel w3-border-left">
+                            <p> </p>
+                      </div>
+                 </div>
             </article>
+            </fontext>
         </section>
-        <nav>
-                
-        </nav>
     </body>
 </html>

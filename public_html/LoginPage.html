@@ -13,6 +13,7 @@ and open the template in the editor.
               href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" 
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
         <style type="text/css">
                  .marginner {
                                 width:200px;
@@ -30,22 +31,29 @@ and open the template in the editor.
                     background-repeat: no-repeat;
                     background-attachment: fixed;
                     background-size: cover;
-                   } 
+                   }
+         fontext{
+                   font-family: 'Sarabun', sans-serif; 
+                }
+                h{
+                    
+                }
         </style>
     </head>
+    <fontext>     
     <body>
-
+        
         <div id="myContent" class="w3-container marginner" style="width: 35% " >
-            
+           
                 <div class="w3-container w3-amber ">
-                    <h2><i class="fa fa-unlock fa-1g"></i> เข้าสู่ระบบ (นักศึกษา/บุคลากร)</h2> 
+                    <h style="font-size:1.5vw;"><i class="fa fa-unlock fa-1g"></i> เข้าสู่ระบบ (นักศึกษา/บุคลากร)</h> 
                 </div>
             
                 <form class="w3-container w3-amber" action method="post">
                     <input class="w3-input w3-border"
                            type="text" id="name"
                            required 
-                           pattern="[A-Za-z0-9]*" maxlength="10" 
+                           pattern="[A-Za-z0-9]*"
                            placeholder="ID User">
                     <br>
                     <input class="w3-input w3-border"
@@ -58,8 +66,8 @@ and open the template in the editor.
 
                 </form>
             <p><button onclick="MyFunction()"  class="w3-button w3-red w3-right">submit</button></p>
-            
         </div>
+              
         <p id="wrong"></p>
             
         <script language="JavaScript">
@@ -72,12 +80,13 @@ and open the template in the editor.
                 window.location = "http://localhost:8383/chatinat/Information.html";
             }
             else{
-                alert("Password Uncorrect");
+                alert("User ID or Password Uncorrect");
             }
            }
         
         </script>
+      
         </body>
-        
+    </fontext>
 </html>
 
