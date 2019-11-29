@@ -7,7 +7,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Login ระบบลงทะเบียนล่าช้า </title>
+        <title> เลือกรายวิชา </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" 
@@ -45,16 +45,25 @@ and open the template in the editor.
                    font-family: 'Sarabun', sans-serif; 
                 }
             </style>    
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#sub {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 400px;
+}
+</style>
     </head>
     <body>
     <fontext>
-        <div class="w3-contrainer" > 
+        <div class="w3-contrainer" >
             <p><b><a href = "http://localhost:8383/chatinat/Condition.html"><button class="w3-button w3-amber mar w3-border w3-border-black w3-round-large"> ย้อนกลับ </button></a></b> </p>
         </div>
 
         <div id="myContent" class="w3-container marginner" style="width: 80% " >
            
-            <FONT  COLOR=#000000 SIZE=6><B>ตารางเรียนของรายวิชาที่ลงทะเบียนไว้แล้ว</B></FONT>
+            <FONT  COLOR=#000000 SIZE=6><B>&emsp;ตารางเรียนของรายวิชาที่ลงทะเบียนไว้แล้ว</B></FONT>
             <TABLE BORDER=0 CELLSPACING=1 CELLPADDING=0 WIDTH=810 ><TR>
 
 <TD BGCOLOR=#FFFFFF></TD></TR>
@@ -99,7 +108,7 @@ and open the template in the editor.
         <TD COLSPAN=6>&nbsp;</TD><TD COLSPAN=6>&nbsp;</TD><TD COLSPAN=6>&nbsp;</TD><TD COLSPAN=6>&nbsp;</TD><TD COLSPAN=6>&nbsp;</TD><TD COLSPAN=6>&nbsp;</TD><TD COLSPAN=6>&nbsp;</TD><TD COLSPAN=6>&nbsp;</TD><TD COLSPAN=5>&nbsp;</TD><TD>&nbsp;</TD></TR>
 </TABLE>
             
-            <FONT  COLOR=#FF5555 SIZE=6><B>ประสงค์จะจดทะเบียนล่าช้า</B></FONT>
+            <FONT  COLOR=#FF5555 SIZE=6><B>&emsp;ประสงค์จะจดทะเบียนล่าช้า</B></FONT>
 
             <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2>
                 <tr><td><FONT ><B>ภาคการศึกษาที่</B>
@@ -169,8 +178,7 @@ and open the template in the editor.
                         <TR VALIGN=TOP>
 
                         <tr>
-                            <td><FONT ><B>ศูนย์</B></td>
-                            <TD>
+                            <td><FONT ><B>ศูนย์&emsp;&emsp;&emsp;&emsp;&emsp;</B>
 
                                 <SELECT NAME=CAMPUSID>
                                     <OPTION VALUE="-">ทั้งหมด
@@ -183,8 +191,8 @@ and open the template in the editor.
                             </td>
                         </tr>
                         <tr valign=top>
-                            <td><FONT >ระดับการศึกษา<br><br></TD>
-                            <TD>
+                            <TD ><FONT ><b>ระดับการศึกษา&ensp;</b>
+                            
                                 <SELECT NAME=LEVELID>
                                     <OPTION VALUE="-">ทั้งหมด
                                     <OPTION VALUE=11 SELECTED >ปริญญาตรี โครงการปกติ
@@ -211,22 +219,126 @@ and open the template in the editor.
                                     <OPTION VALUE=99>ไม่ระบุ
                                 </SELECT>
 
-                            </td></tr></table>
-
-                    <FONT ><B>รหัสวิชา</B>&nbsp;
-                    <INPUT TYPE=TEXT NAME=coursecode SIZE=10>
+                            </td></tr><br></table>
+            
+                    <FONT ><br><B>รหัสวิชา</B>&nbsp;
+                    <INPUT TYPE=TEXT NAME=coursecode SIZE=10 id="code"
+                           required 
+                           pattern="[A-Za-z0-9]*">
                     </FONT>
 
                     <FONT >&nbsp;<B>ชื่อวิชา</B>&nbsp;
-                    <INPUT TYPE=TEXT NAME=coursename SIZE=20>
+                    <INPUT TYPE=TEXT NAME=coursename SIZE=20 id="namesub">
                     </FONT>
 
                     <FONT >
-                    <INPUT TYPE=submit VALUE=ค้นหา  >
+                    <INPUT TYPE=submit VALUE=ค้นหา onclick="MyFunction()" >
                     </FONT>
 
                     <INPUT TYPE=HIDDEN NAME=cmd VALUE=2>
-                        <div class="w3-container">
+                    <div class="w3-container " >
+                              <div class="w3-panel w3-border-left w3-border-white">
+                                   <p> </p>
+                                </div>
+                        </div>
+
+
+        </div>
+        <p id="wrong"></p>
+                    <INPUT TYPE=HIDDEN NAME=cmd VALUE=2>
+                    
+                    
+        <div id="sub">
+    <div class="w3-container">
+        <div>
+            <hk ALIGN=CENTER><FONT><b>&ensp;รหัสวิชา: cs101</b></hk>
+<BR>
+<TABLE ALIGN=CENTER BORDER=0 CELLSPACING=1 CELLPADDING=3><TR><TD></TD>
+<TD ALIGN=CENTER COLSPAN=13><FONT><B>ใช้เม้าส์คลิกที่ไอคอนเลือกวิชาเพื่อเพิ่มรายวิชา</B></FONT></TD>
+					<tr><td></td><td ALIGN=CENTER colspan="3">
+					<font color=red><u>หมายเหตุ</u></font>&nbsp;<img src=took.png border=0 width=40 height=40> &nbsp;รายวิชาที่ต้องขอโควตา
+
+					<td></tr>
+					</TR><TR><TD></TD>
+                    
+                    <TD BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>&nbsp;เลือก</TD>
+                    
+                    <TD BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>&nbsp;ศูนย์</TD>
+                    <TD BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>หลักสูตร</TD>
+                    <TD BGCOLOR=#383880 colspan=2><FONT SIZE=3 COLOR=#FFFFFF >&nbsp;รหัสวิชา</TD>
+                    <TD BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>&nbsp;ชื่อวิชา</TD>
+                    <TD NOWRAP BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>&nbsp;หน่วยกิต&nbsp;</TD>
+                    <TD ALIGN=RIGHT BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>Sec/Gr&nbsp;</TD>
+                    <TD NOWRAP BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>&nbsp;เวลา&nbsp;</TD>
+                    <TD NOWRAP BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>&nbsp;เวลาสอบ&nbsp;</TD>
+                    <TD ALIGN=RIGHT BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>จำนวนรับ&nbsp;</TD>
+                    <TD ALIGN=RIGHT BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>เหลือ&nbsp;</TD>
+                    <TD BGCOLOR=#383880><FONT SIZE=3 COLOR=#FFFFFF>&nbsp;สถานะ</TD></TR>
+                    
+                    <TR VALIGN=TOP><TD WIDTH=30></TD>
+                        <TD ALIGN=LEFT BGCOLOR=#F0F0F5>&emsp;&ensp;<a href="http://localhost:8383/chatinat/petition.html"> <img src=writing.png border=0 width=50 height=50></a> &nbsp;</TD>
+                    <TD ALIGN=LEFT BGCOLOR=#F0F0F5><FONT SIZE=2>ศูนย์รังสิต</TD>
+                    <TD align=center BGCOLOR=#F0F0F5><FONT SIZE=2>2561</TD><TD BGCOLOR=#F0F0F5></td>
+                    <TD BGCOLOR=#F0F0F5><FONT SIZE=2><A HREF=#current onClick="window.open('class_info_5.asp?courseid=48794&avs971671139=4','newWin','scrollbars=yes,titlebar=no,width=600,height=350')">CS101</A></TD>
+                    <TD BGCOLOR=#F0F0F5><FONT SIZE=2>DISCRETE STRUCTURES<FONT SIZE=2 color=#407060><FONT  style=font-family:tahoma;font-size:11px;COLOR:#808080;>อ.ดร.วนิดา พฤทธิวิทยา</TD>
+                    <TD NOWRAP BGCOLOR=#F0F0F5><FONT SIZE=2>&nbsp;3</TD><TD ALIGN=RIGHT BGCOLOR=#F0F0F5><FONT SIZE=2>020001&nbsp;</TD>
+                    <TD NOWRAP BGCOLOR=#F0F0F5><FONT SIZE=2><B><FONT style=font-family:tahoma;font-size:10px; COLOR=#5080E0>TU&nbsp;</FONT></B><FONT  style=font-family:tahoma;font-size:10px;COLOR:#808080;>09:30-11:00 <U>LC3-121</U><BR><B><FONT style=font-family:tahoma;font-size:10px; COLOR=#5080E0>TH&nbsp;</FONT></B><FONT  style=font-family:tahoma;font-size:10px;COLOR:#808080;>09:30-11:00 <U>LC3-121</U></TD>
+                    <TD NOWRAP BGCOLOR=#F0F0F5><FONT SIZE=2><FONT style=font-family:tahoma;font-size:10px;COLOR:#E090E0;><B>M&nbsp;&nbsp;&nbsp;</B></font><FONT  style=font-family:tahoma;font-size:10px;COLOR:#808080;>01/10/62 09:00-11:00 <U>N/A</U></font></BR><FONT  style=font-family:tahoma;font-size:10px;COLOR:#E090E0;><B>F&nbsp;&nbsp;&nbsp;&nbsp;</B></font><FONT  style=font-family:tahoma;font-size:10px;COLOR:#808080;>04/12/62 09:00-12:00 <U>N/A</U></font></TD>
+                    <TD ALIGN=RIGHT BGCOLOR=#F0F0F5><FONT SIZE=2>67&nbsp;</TD>
+                    <TD ALIGN=RIGHT BGCOLOR=#F0F0F5><FONT SIZE=2>6&nbsp;</TD>
+                    <TD BGCOLOR=#F0F0F5><FONT SIZE=2>&nbsp;ปกติ</TD><TD></TD></TR><TR VALIGN=TOP><TD WIDTH=30></TD>
+                    
+                    <TD ALIGN=LEFT BGCOLOR=#F0F0F5>&emsp;&ensp;<img src=writing.png border=0 width=50 height=50 onclick="full()"> &nbsp;</TD>
+                    <TD ALIGN=LEFT BGCOLOR=#F0F0FF><FONT SIZE=2>ศูนย์รังสิต</TD>
+                    <TD align=center BGCOLOR=#F0F0FF><FONT SIZE=2>2561</TD>
+                    <TD BGCOLOR=#F0F0FF></td><TD BGCOLOR=#F0F0FF><FONT SIZE=2><A HREF=#current onClick="window.open('class_info_5.asp?courseid=48794&avs971671139=5','newWin','scrollbars=yes,titlebar=no,width=600,height=350')">CS101</A></TD>
+                    <TD BGCOLOR=#F0F0FF><FONT SIZE=2>DISCRETE STRUCTURES<FONT SIZE=2 color=#407060><FONT  style=font-family:tahoma;font-size:11px;COLOR:#808080;>อ.นุชชากร งามเสาวรส</TD>
+                    <TD NOWRAP BGCOLOR=#F0F0FF><FONT SIZE=2>&nbsp;3</TD>
+                    <TD ALIGN=RIGHT BGCOLOR=#F0F0FF><FONT SIZE=2>020002&nbsp;</TD>
+                    <TD NOWRAP BGCOLOR=#F0F0FF><FONT SIZE=2><B><FONT style=font-family:tahoma;font-size:10px; COLOR=#5080E0>TU&nbsp;</FONT></B><FONT  style=font-family:tahoma;font-size:10px;COLOR:#808080;>09:30-11:00 <U>LC3-122</U><BR><B><FONT style=font-family:tahoma;font-size:10px; COLOR=#5080E0>TH&nbsp;</FONT></B><FONT  style=font-family:tahoma;font-size:10px;COLOR:#808080;>09:30-11:00 <U>LC3-122</U></TD>
+                    <TD NOWRAP BGCOLOR=#F0F0FF><FONT SIZE=2><FONT style=font-family:tahoma;font-size:10px;COLOR:#E090E0;><B>M&nbsp;&nbsp;&nbsp;</B></font><FONT  style=font-family:tahoma;font-size:10px;COLOR:#808080;>01/10/62 09:00-11:00 <U>N/A</U></font></BR><FONT  style=font-family:tahoma;font-size:10px;COLOR:#E090E0;><B>F&nbsp;&nbsp;&nbsp;&nbsp;</B></font><FONT  style=font-family:tahoma;font-size:10px;COLOR:#808080;>04/12/62 09:00-12:00 <U>N/A</U></font></TD>
+                    <TD ALIGN=RIGHT BGCOLOR=#F0F0FF><FONT SIZE=2>51&nbsp;</TD>
+                    <TD ALIGN=RIGHT BGCOLOR=#F0F0FF><FONT SIZE=2 COLOR=#900000>ที่นั่งเต็ม</TD>
+                    <TD BGCOLOR=#F0F0FF><FONT SIZE=2>&nbsp;ปกติ</TD><TD></TD></TR><TR VALIGN=TOP><TD WIDTH=30></TD>
+                    
+</TABLE>
+</div>
+    </div>
+                    
+                    
+        <script language="JavaScript">
+            var sub = document.getElementById("sub");
+            sub.style.display = "none";
+        function MyFunction() {
+            
+            var code = document.getElementById("code").value;
+            var namesub = document.getElementById("namesub").value;
+            
+            
+            if(code === "cs101" || namesub === "DISCRETE STRUCTURES")
+            {
+                sub.style.display = "block";
+            }
+            else if(code === "py252" || namesub === "PSYCHOLOGY OF INTERPERSONAL RELATION")
+            {
+                alert("**รหัสวิชานี้ไม่ใช่รหัสของคณะวิทยาศาสตร์และเทคโนโลยี");
+            }
+        /*    else if(code === null && namesub === null)
+            {
+                alert("กรุณารอใส่ข้อความเพื่อค้นหา");
+            }
+        */   else{
+                //alert("อยู่ระหว่างพัฒนา");
+                alert("กรุณารอใส่ข้อความเพื่อค้นหา");
+            }
+           }
+        function full() {
+                alert("**ที่นั่งเต็ม");
+            }
+        
+        </script>
+        
+                        <div class="w3-container ">
                               <div class="w3-panel w3-border-left w3-border-white">
                                    <p> </p>
                                 </div>
